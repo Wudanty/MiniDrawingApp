@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="miniPaintApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:miniPaintApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Width="1959">
+
+    <Grid Background="#FF67C8FF">
+        <Canvas x:Name="poleRysowania" Margin="10,10,0,10" Background="White" PointerPressed="poleRysowania_PointerPressed" PointerMoved="poleRysowania_PointerMoved" PointerExited="poleRysowania_PointerExited" HorizontalAlignment="Left" Width="1615" PointerReleased="poleRysowania_PointerReleased"/>
+        <RadioButton x:Name="rdbProsty" Content="Prosty" Margin="1724,54,0,0" VerticalAlignment="Top" Height="33" Width="122" Checked="rdbProsty_Checked" Background="#FFB3E2FD" BorderBrush="#FF3E95C7"/>
+        <RadioButton x:Name="rdbDowolny" Content="Dowolny" Margin="1724,92,0,0" VerticalAlignment="Top" Height="31" Width="122" Checked="rdbDowolny_Checked" Background="#FFB3E2FD" BorderBrush="#FF3E95C7"/>
+        <StackPanel HorizontalAlignment="Left" Name="spKolory" PointerPressed="spKolory_PointerPressed" Margin="1663,197,0,500" Width="245">
+            <Rectangle x:Name="StackPanelRectangleBlack" Height="75" Width="75" Fill="Black" RenderTransformOrigin="0.51,0.49" PointerPressed="StackPanelRectangleBlack_PointerPressed" />
+            <Rectangle x:Name="StackPanelRectangleRed" Height="75" Width="75" Fill="Red" HorizontalAlignment="Center" PointerPressed="StackPanelRectangleRed_PointerPressed" />
+            <Rectangle x:Name="StackPanelRectangleGreen" Height="75" Width="75" Fill="Green" HorizontalAlignment="Center" PointerPressed="StackPanelRectangleGreen_PointerPressed" />
+            <Rectangle x:Name="StackPanelRectangleBlue" Height="75" Width="75" Fill="Blue" HorizontalAlignment="Center" PointerPressed="StackPanelRectangleBlue_PointerPressed" />
+        </StackPanel>
+        <Slider x:Name="SliderThickness" HorizontalAlignment="Left" Margin="1748,622,0,0" VerticalAlignment="Top" Width="100" ValueChanged="Slider_ValueChanged" Minimum="1"/>
+        <TextBox x:Name="TextBoxSlider" HorizontalAlignment="Left" Margin="1733,585,0,0" Text="Grubość Czcionki:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button x:Name="ButtonCofnij" Content="Cofnij" Margin="1770,681,0,0" VerticalAlignment="Top" Click="ButtonCofnij_Click"/>
+        <Button x:Name="ButtonClose" Content="Zamknij&#xD;&#xA;" Margin="1767,738,0,0" VerticalAlignment="Top" Height="32" Click="ButtonClose_Click"/>
+
+    </Grid>
+</Page>
